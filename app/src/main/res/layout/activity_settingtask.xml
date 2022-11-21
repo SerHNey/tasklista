@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settingtask">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="100dp">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="Название задачи"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@id/check"/>
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text"/>
+        <EditText
+            android:id="@+id/nametask"
+            android:hint="Задача"
+            android:textSize="36sp"
+            android:layout_below="@id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/check"/>
+        <TextView
+            android:id="@+id/textt"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Описание"
+            android:textSize="16dp"
+            android:layout_below="@id/nametask"
+            android:layout_toRightOf="@id/check"/>
+        <EditText
+            android:id="@+id/texttask"
+            android:hint="Описание"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textt"
+            android:layout_toRightOf="@id/check"
+            android:paddingLeft="10dp"/>
+        <TextView
+            android:id="@+id/texttt"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выберите время"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_below="@id/texttask"
+            android:layout_toRightOf="@id/check"/>
+        <TextView
+            android:id="@+id/datatime"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texttt"
+            android:clickable="true"
+            android:hint="Click to add remaider"
+            android:layout_toRightOf="@id/check" />
+
+        <Button
+            android:id="@+id/addtask"
+            android:layout_marginTop="20dp"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datatime"
+            android:text="Добавить"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datatime"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:onClick="clear"
+            android:text="Очистить"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
