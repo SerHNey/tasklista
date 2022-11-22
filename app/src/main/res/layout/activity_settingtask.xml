@@ -18,12 +18,15 @@
             android:textSize="16dp"
             android:text="Название задачи"
             android:textColor="@color/black"
-            android:layout_toRightOf="@id/check"/>
+            android:layout_toRightOf="@id/check"
+            />
         <CheckBox
             android:id="@+id/check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text"/>
+            android:layout_below="@id/text"
+            android:layout_alignBottom="@id/nametask"
+            />
         <EditText
             android:id="@+id/nametask"
             android:hint="Задача"
@@ -69,20 +72,54 @@
             android:layout_below="@id/texttt"
             android:clickable="true"
             android:hint="Click to add remaider"
-            android:layout_toRightOf="@id/check" />
+            android:layout_toRightOf="@id/check"
+            android:layout_marginBottom="20dp"/>
+
+        <CheckBox
+            android:id="@+id/hard_priority"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datatime"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/check"
+
+            android:theme="@style/MyCheckBox"/>
+
+        <CheckBox
+            android:id="@+id/middle_priority"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datatime"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_toRightOf="@id/hard_priority"
+            android:background="#e0d612" />
+        <CheckBox
+            android:id="@+id/small_priority"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#57e012"
+            android:layout_below="@id/datatime"
+            android:layout_toRightOf="@id/middle_priority"
+            android:layout_margin="2dp"
+            />
+
 
         <Button
-            android:id="@+id/addtask"
+            android:id="@+id/sma"
             android:layout_marginTop="20dp"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/datatime"
+            android:layout_below="@id/small_priority"
             android:text="Добавить"/>
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/datatime"
+            android:layout_below="@id/small_priority"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:layout_marginTop="25dp"
