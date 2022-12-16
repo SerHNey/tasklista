@@ -224,7 +224,12 @@ public class MainActivity extends AppCompatActivity {
             //menu to add item to the list
             case R.id.add_item:
                 //startActivity(new Intent(MainActivity.this, EditTask.class));
-                startActivity(new Intent(MainActivity.this, PhotoListActivity.class));
+                startActivity(new Intent(MainActivity.this, EditTask.class));
+                return true;
+
+            case R.id.pogoda:
+                //startActivity(new Intent(MainActivity.this, EditTask.class));
+                startActivity(new Intent(MainActivity.this, pogoda.class));
                 return true;
 
             case R.id.clear_all:

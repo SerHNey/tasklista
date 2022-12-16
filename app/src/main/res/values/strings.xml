@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TaskList</string>
+
+    <string name="no_user_input">Нет города</string>
 </resources>

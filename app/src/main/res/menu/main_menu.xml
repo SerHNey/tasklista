@@ -8,6 +8,12 @@
         android:title="AddItem"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/pogoda"
+        android:icon="@drawable/ic_done_black_24dp"
+        android:title="AddItem"
+        app:showAsAction="always"
+        />
 
 
     <item
