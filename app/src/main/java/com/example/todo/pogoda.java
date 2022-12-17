@@ -104,7 +104,9 @@ public class pogoda extends AppCompatActivity {
 
             try {
                 JSONObject object = new JSONObject(result);
-                textView.setText("Температура: "+ object.getJSONObject("main").getDouble("temp"));
+                                textView.setText("Температура: "+ object.getJSONObject("main").getDouble("temp") + "°C"
+                        + "\nОщущается как: "+ object.getJSONObject("main").getDouble("feels_like") + "°C"
+                        + "\nВетер: "+ object.getJSONObject("wind").getString("speed")+ "м/c" );
             } catch (JSONException e) {
                 e.printStackTrace();
             }
