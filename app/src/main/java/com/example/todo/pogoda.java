@@ -43,7 +43,7 @@ public class pogoda extends AppCompatActivity {
                 }else {
                     String city = editText.getText().toString();
                     String key = "a7d9201b6fe5212fa77c11fc62cef90d";
-                    String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +",uk&APPID="+ key +"&units=metric&lang=ru";
+                    String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +",org&APPID="+ key +"&units=metric&lang=ru";
 
                     new GetURLData().execute(url);
 
