@@ -14,7 +14,7 @@ public class MyAlarm extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         NotificationCompat.Builder  builder = new NotificationCompat.Builder(context, "notifyLemubit")
                 .setSmallIcon(R.drawable.ic_done_black_24dp)
-                .setContentText("Остаток от таймера")
+                .setContentText("Время вышло")
                 //title of the alarm will be title of the item itself,
                 // which we receive  through the intent alarm_intent in "Editor.java"
                 .setContentTitle(intent.getExtras().getString("title"))

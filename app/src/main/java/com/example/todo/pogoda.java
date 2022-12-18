@@ -46,7 +46,6 @@ public class pogoda extends AppCompatActivity {
                     String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +",org&APPID="+ key +"&units=metric&lang=ru";
 
                     new GetURLData().execute(url);
-
                 }
             }
         });
@@ -104,7 +103,7 @@ public class pogoda extends AppCompatActivity {
 
             try {
                 JSONObject object = new JSONObject(result);
-                                textView.setText("Температура: "+ object.getJSONObject("main").getDouble("temp") + "°C"
+                textView.setText("Температура: "+ object.getJSONObject("main").getDouble("temp") + "°C"
                         + "\nОщущается как: "+ object.getJSONObject("main").getDouble("feels_like") + "°C"
                         + "\nВетер: "+ object.getJSONObject("wind").getString("speed")+ "м/c" );
             } catch (JSONException e) {
