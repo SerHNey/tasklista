@@ -32,8 +32,14 @@ public class pogoda extends AppCompatActivity {
         setContentView(R.layout.activity_pogoda);
 
         editText = findViewById(R.id.editTextTextPersonName);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.addButton);
         textView = findViewById(R.id.textView);
+
+        String city = "Нижний Новгород";
+        String key = "a7d9201b6fe5212fa77c11fc62cef90d";
+        String url = "https://api.openweathermap.org/data/2.5/weather?q="+ city +",org&APPID="+ key +"&units=metric&lang=ru";
+
+        new GetURLData().execute(url);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,9 +109,11 @@ public class pogoda extends AppCompatActivity {
 
             try {
                 JSONObject object = new JSONObject(result);
-                textView.setText("Температура: "+ object.getJSONObject("main").getDouble("temp") + "°C"
+                textView.setText(
+                        "Температура: "+ object.getJSONObject("main").getDouble("temp") + "°C"
                         + "\nОщущается как: "+ object.getJSONObject("main").getDouble("feels_like") + "°C"
-                        + "\nВетер: "+ object.getJSONObject("wind").getString("speed")+ "м/c" );
+                        + "\nВетер: "+ object.getJSONObject("wind").getDouble("speed")+ "м/c"
+                        + "\nПогода: "+object.getJSONArray("weather").getJSONObject(0).get("description"));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
